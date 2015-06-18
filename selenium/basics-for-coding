@@ -1,0 +1,10 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Kesy
+
+sel = webdriver.Firefox()
+sel.get("https://www.facebook.com")
+sel.find_element_by_id("email").clear()
+sel.find_element_by_id("email").send_keys("testuser")
+sel.find_element_by_id("pass").clear()
+sel.find_element_by_id("pass").send_keys("password")
+sel.find_element_by_id("u_0_x").click()
