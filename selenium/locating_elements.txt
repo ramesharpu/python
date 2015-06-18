@@ -62,3 +62,36 @@ continue = driver.find_element_by_name('continue')
 login_form = driver.find_element_by_xpath("/html/body/form[1]")
 login_form = driver.find_element_by_xpath("//form[1]")
 login_form = driver.find_element_by_xpath("//form[@id='loginForm']")
+username = driver.find_element_by_xpath("//form[input/@name='username']")
+username = driver.find_element_by_xpath("//form[@id='loginForm']/input[1]")
+username = driver.find_element_by_xpath("//input[@name='username']")
+clear_button = driver.find_element_by_xpath("//input[@name='continue'][@type='button']")
+clear_button = driver.find_element_by_xpath("//form[@id='loginForm']/input[4]")
+
+Hypertext
+=========
+{code}
+<html>
+ <body>
+  <p>Are you sure you want to do this?</p>
+  <a href="continue.html">Continue</a>
+  <a href="cancel.html">Cancel</a>
+</body>
+<html>
+{code}
+
+continue_link = driver.find_element_by_link_text('Continue')
+continue_link = driver.find_element_by_partial_link_text('Conti')
+
+References:
+===========
+These examples cover some basics, but in order to learn more, the following references are recommended:
+
+W3Schools XPath Tutorial
+W3C XPath Recommendation
+XPath Tutorial - with interactive examples.
+There are also a couple of very useful Add-ons that can assist in discovering the XPath of an element:
+
+XPath Checker - suggests XPath and can be used to test XPath results.
+Firebug - XPath suggestions are just one of the many powerful features of this very useful add-on.
+XPath Helper - for Google Chrome
