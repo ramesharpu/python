@@ -1,0 +1,89 @@
+
+# Navigation
+driver.get("http://www.google.com")
+
+# Interaction using xpath (if element is not found then - NoSuchElementException will be raised)
+element = driver.find_element_by_id("passwd-id")
+element = driver.find_element_by_name("passwd")
+element = driver.find_element_by_xpath("//input[@id='passwd-id']")
+
+# Editing or passing a value
+element.clear()
+element.send_keys("your text value")
+
+# Interacting with javascript
+element.send_keys("your text value", Keys.ARROW_DOWN)
+
+# To print a dropdown value
+element = driver.find_element_by_xpath("//select[@name='name']")
+all_options = element.find_elements_by_tag_name("option")
+for option in all_options:
+    print("Value is: %s" % option.get_attribute("value"))
+    option.click() ==> optional to click that value
+
+# To select a drop down value
+from selenium.webdriver.support.ui import Select
+select = Select(driver.find_element_by_name('name'))
+select.select_by_index(index)
+select.select_by_visible_text("text")
+select.select_by_value(value)
+
+# To deselect all the value
+select = Select(driver.find_element_by_id('id'))
+select.deselect_all()
+
+# Suppose in a test, we need the list of all default selected options, Select class provides a property method that returns a list:
+select = Select(driver.find_element_by_xpath("xpath"))
+all_selected_options = select.all_selected_options
+
+# To get all the available options
+options = select.options
+
+# To click a button (say submit)
+driver.find_element_by_id("submit").click()
+element.submit()
+
+# Drag and Drop
+element = driver.find_element_by_name("source")
+target = driver.find_element_by_name("target")
+
+from selenium.webdriver import ActionChains
+action_chains = ActionChains(driver)
+action_chains.drag_and_drop(element, target).perform()
+
+# Moving between windows and frames
+driver.switch_to_window("windowName")
+
+
+Alternatively, you can pass a “window handle” to the “switch_to_window()” method. Knowing this, it’s possible to iterate over every open window like so:
+
+for handle in driver.window_handles:
+    driver.switch_to_window(handle)
+
+driver.switch_to_frame("frameName")
+driver.switch_to_frame("frameName.0.child") ==> sub frames using index
+driver.switch_to_default_content() ==> switcing back to the parent frame
+
+# Popup dialogs
+alert = driver.switch_to_alert()
+
+# Browser History
+driver.get("http://www.example.com")
+driver.forward()
+driver.back()
+
+## Browser Cookies
+==================
+# Go to the correct domain
+driver.get("http://www.example.com")
+
+# Now set the cookie. This one's valid for the entire domain
+cookie = {‘name’ : ‘foo’, ‘value’ : ‘bar’}
+driver.add_cookie(cookie)
+
+# And now output all the available cookies for the current URL
+driver.get_cookies()
+
+
+
+

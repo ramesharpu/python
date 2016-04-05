@@ -1,15 +1,29 @@
-#!/usr/bin/python
+"""
 
-from math import exp
+# Returns the absolute value of a number
+Arguments:
+    plain or long integer
+    floating point number
+PS: if complex number then its magnitude will be returned
+"""
 
-print "Absolute of -ve number say -15 is printed below"
-print abs(-15)
+def absexample(value):
+    print "Absolute value of {} is {}\n".format(value, abs(value))
 
-print "Absolute of floating number say -15.5 is printed below"
-print abs(-15.5)
-'''
-print "Absolute value of a complex number say 1e-5 is printed below"
-print abs(exp(1e-5)-1)
-print exp(1e-5)-1
-I have doubt in this section, so need to clarify it before coding it :)
-'''
+def integer_example():
+    print "# Integer value"
+    absexample(-5)
+
+def longinteger_example():
+    print "# Long interger value"
+    absexample(-281473648)
+
+def complex_example():
+    print "#Complex number"
+    x = complex(-4, 2)
+    absexample(x)
+
+if __name__ == '__main__':
+    integer_example()
+    longinteger_example()
+    complex_example()
