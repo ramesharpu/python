@@ -4,6 +4,12 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 2.7.5 (/usr/bin/python2.7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="cfme_tests" />
+    <orderEntry type="module" module-name="myDjangoProject" />
+    <orderEntry type="module" module-name="testproject" />
+    <orderEntry type="module" module-name="mysite" />
+    <orderEntry type="module" module-name="t1" />
+    <orderEntry type="module" module-name="t2" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

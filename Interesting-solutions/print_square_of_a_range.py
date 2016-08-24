@@ -12,7 +12,9 @@ def square_generator(number):
     print list(mygenerator)
 
 def test():
-    abc
+    # abc
+    pass
+
 
 if __name__ == '__main__':
     # Print square of numbers till 10
@@ -20,4 +22,4 @@ if __name__ == '__main__':
     square_generator(11)
 
 
-map(str, mylist)
+# map(str, mylist)

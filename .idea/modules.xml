@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/workspace/cfme_tests/.idea/cfme_tests.iml" filepath="$USER_HOME$/workspace/cfme_tests/.idea/cfme_tests.iml" />
+      <module fileurl="file://$USER_HOME$/workspace/myDjangoProject/.idea/myDjangoProject.iml" filepath="$USER_HOME$/workspace/myDjangoProject/.idea/myDjangoProject.iml" />
+      <module fileurl="file://$USER_HOME$/workspace/mysite/.idea/mysite.iml" filepath="$USER_HOME$/workspace/mysite/.idea/mysite.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python.iml" filepath="$PROJECT_DIR$/.idea/python.iml" />
+      <module fileurl="file://$USER_HOME$/workspace/christproject/t1/.idea/t1.iml" filepath="$USER_HOME$/workspace/christproject/t1/.idea/t1.iml" />
+      <module fileurl="file://$USER_HOME$/workspace/christproject/t2/.idea/t2.iml" filepath="$USER_HOME$/workspace/christproject/t2/.idea/t2.iml" />
+      <module fileurl="file://$USER_HOME$/workspace/test/testproject/.idea/testproject.iml" filepath="$USER_HOME$/workspace/test/testproject/.idea/testproject.iml" />
     </modules>
   </component>
 </project>
