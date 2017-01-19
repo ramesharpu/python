@@ -1,0 +1,18 @@
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        index_of_min = i
+        for j in range(i, n):
+            if arr[index_of_min]>arr[j]:
+                index_of_min = j    
+        arr[index_of_min], arr[i] = arr[i], arr[index_of_min]
+    return arr
+
+
+arr = [4, 6, 1, 5, 8, 9, 2]
+# Print the unsorted array
+print ("Given Array - {}".format(arr))
+
+selection_sort(arr)
+# Print the sorted array
+print ("Sorted Array - {}".format(arr))
